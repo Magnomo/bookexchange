@@ -20,6 +20,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'dt_nasc',
+        'img_profile',
+        'level_id'
     ];
 
     /**
@@ -40,4 +43,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function books(){
+        return $this->hasMany('App\Models\Book');
+    }
+    
+    public function level(){
+        return $this->hasOne('App\Models\Level');
+    }
 }

@@ -18,6 +18,7 @@ class BookTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('author');
+            $table->text('description');
             $table->foreignId('user_id')->constrained('users');
             
             $table->timestamps();
