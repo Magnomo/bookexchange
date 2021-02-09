@@ -19,9 +19,9 @@ class UserTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->foreignId('level_id')->constrained('levels');
+            $table->integer('level_id')->unsigned()->nullable();
             $table->date('dt_nasc')->nullable();
-            $table->string('img_profile');
+            $table->string('img_profile')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
