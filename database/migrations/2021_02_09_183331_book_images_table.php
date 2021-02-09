@@ -14,7 +14,7 @@ class BookImagesTable extends Migration
     public function up()
     {
         //
-        Schema::create('book_images', function(Blueprint $table){
+        Schema::create('book_images', function (Blueprint $table) {
             $table->id();
             $table->foreignId('book_id')->constrained('books');
             $table->string('url');

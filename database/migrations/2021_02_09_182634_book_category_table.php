@@ -14,9 +14,10 @@ class BookCategoryTable extends Migration
     public function up()
     {
         //
-        Schema::create('books_categorys', function(Blueprint $table){
+        Schema::create('books_categorys', function (Blueprint $table) {
             $table->foreignId('book_id')->constrained('books');
             $table->foreignId('user_id')->constrained('users');
+            $table->timestamps();
         });
     }
 
